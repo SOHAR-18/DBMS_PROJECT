@@ -1,0 +1,81 @@
+/* Enhanced Patient Page Styles - Matches Main Style.css */
+#patientPage {
+    max-width: 500px; /* Increased from 400px */
+    margin: 0 auto;
+    padding: 40px; /* Added padding */
+    background: rgba(255, 255, 255, 0.95); /* Matching container style */
+    border-radius: 20px; /* Matching container style */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Added shadow */
+}
+
+#patientPage h2 {
+    font-size: 2.2rem; /* Larger heading */
+    margin-bottom: 30px;
+    color: #2c3e50; /* Matching text color */
+    text-align: center;
+}
+
+#patientPage input, 
+#patientPage select {
+    width: 100%;
+    padding: 16px; /* Increased from 12px */
+    margin: 16px 0; /* Increased from 8px */
+    font-size: 18px; /* Larger text */
+    border-radius: 12px; /* More rounded corners */
+    border: 2px solid #ddd; /* Thicker border */
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+#patientPage select {
+    background-color: #f8f9fa; /* Lighter background */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-position: right 16px center; /* Better icon positioning */
+    background-size: 1.5em; /* Larger dropdown icon */
+    cursor: pointer;
+}
+
+#patientPage input:focus,
+#patientPage select:focus {
+    outline: none;
+    border-color: #6c5ce7; /* Purple border on focus */
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2); /* Focus ring */
+}
+
+#patientPage button {
+    width: 100%;
+    padding: 18px; /* Increased from 12px */
+    margin-top: 25px; /* Increased from 15px */
+    font-size: 18px; /* Larger text */
+    border-radius: 12px; /* Matching other elements */
+    background: linear-gradient(135deg, #6c5ce7, #00cec9); /* Gradient like main buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#patientPage button:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #patientPage {
+        width: 90%;
+        padding: 30px;
+    }
+    
+    #patientPage h2 {
+        font-size: 1.8rem;
+    }
+    
+    #patientPage input,
+    #patientPage select,
+    #patientPage button {
+        padding: 14px;
+        font-size: 16px;
+    }
+}

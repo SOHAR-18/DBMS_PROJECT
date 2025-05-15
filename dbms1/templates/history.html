@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="history-container">
+    <h2>Your Appointment History</h2>
+    
+    {% if appointments %}
+    <table class="appointment-table">
+        <thead>
+            <tr>
+                <th>Doctor</th>
+                <th>Time Slot</th>
+                <th>Purpose</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment.doctor_type }}</td>
+                <td>{{ appointment.time_slot }}</td>
+                <td>{{ appointment.purpose }}</td>
+                <td>Completed</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No appointment history found.</p>
+    {% endif %}
+    
+    <div class="action-buttons">
+        <a href="{{ url_for('patient_details') }}" class="btn">Book New Appointment</a>
+        <a href="{{ url_for('home') }}" class="btn">Back to Home</a>
+    </div>
+</div>
+{% endblock %}

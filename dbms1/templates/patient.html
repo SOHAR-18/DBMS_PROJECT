@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/patient.css') }}">
+{% endblock %}
+
+{% block content %}
+<div id="patientPage">
+    <h2>Patient Details</h2>
+    <form method="POST" action="{{ url_for('patient_details') }}">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="number" name="age" placeholder="Age" required min="1" max="120">
+        <select name="sex" required>
+            <option value="" disabled selected>Select Sex</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <input type="text" name="purpose" placeholder="Purpose of Visit" required>
+        <button type="submit">Next</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="token-container">
+    <h2>Your Token Number: {{ token }}</h2>
+    <p>Please wait for your appointment.</p>
+    <p>You will be notified when the doctor is ready.</p>
+    <a href="{{ url_for('patient_details') }}" class="btn">Book Another Appointment</a>
+    <a href="{{ url_for('appointment_history') }}" class="btn">View Appointment History</a>
+</div>
+{% endblock %}

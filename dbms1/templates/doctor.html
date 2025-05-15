@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="DoctorsPage">
+    <h3>Choose Doctor</h3>
+    <form method="POST" action="{{ url_for('select_doctor') }}">
+        <label><input type="radio" name="doctor" value="Gynecologist" required> Gynecologist</label>
+        <label><input type="radio" name="doctor" value="Orthopaedist"> Orthopaedist</label>
+        <label><input type="radio" name="doctor" value="Cardiologist"> Cardiologist</label>
+        <label><input type="radio" name="doctor" value="Neurologist"> Neurologist</label>
+        <br>
+        <button type="submit">Next</button>
+    </form>
+</div>
+{% endblock %}

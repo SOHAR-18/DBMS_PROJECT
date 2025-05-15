@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="timeSlotPage">
+    <h2>Select Time Slot</h2>
+    <form method="POST" action="{{ url_for('select_time_slot') }}">
+        <select name="time_slot" required>
+            <option value="" disabled selected>Select Time Slot</option>
+            <option>10:00 AM - 10:30 AM</option>
+            <option>11:00 AM - 11:30 AM</option>
+            <option>2:00 PM - 2:30 PM</option>
+            <option>4:00 PM - 4:30 PM</option>
+        </select>
+
+        <input type="number" name="temperature" placeholder="Body Temperature (°F)" step="0.1" required>
+        <input type="text" name="medicines" placeholder="Medicines Used">
+        <textarea name="description" placeholder="Describe your issue" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

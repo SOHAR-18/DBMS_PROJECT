@@ -1,0 +1,1 @@
+SELECT * FROM appointments WHERE user_id = ? ORDER BY created_at DESC;
